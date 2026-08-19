@@ -17,6 +17,19 @@ app.get("/health", (req, res) => {
     });
 });
 
+// Study progress feature
+app.get("/api/study-progress", (req, res) => {
+    const completed = 6;
+    const total = 10;
+    const progress = Math.round((completed / total) * 100);
+
+    res.json({
+        completed,
+        total,
+        progress
+    });
+});
+
 // Start server
 app.listen(PORT, () => {
     console.log(
