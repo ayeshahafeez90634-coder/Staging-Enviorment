@@ -30,6 +30,7 @@ app.get("/api/study-progress", (req, res) => {
     });
 });
 
+// Server configuration
 // Start server
 app.listen(PORT, () => {
     console.log(
